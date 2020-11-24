@@ -20,13 +20,13 @@
         }
       };
 
-      var sums = ["$$ln1$$",
-                  "integral from 0 to root 2 of x dx",
-                  "$$\\left[ x=0 \\right] $$",
-                  "4cossq30",
-                  "$$x^2 - 8x + 16 = 0$$",
-                  "root25",
-                  "3!",
+      var sums = ["\\(ln1\\)",
+                  "\\(\\int_{0}^{\\sqrt{2}}x\\,dx\\)",
+                  "\\(51\\mod7\\)",
+                  "\\(4\\cos^{2}30\\)",
+                  "\\(x^2 - 8x + 16 = 0\\)",
+                  "\\(\\sqrt{25}\\)",
+                  "\\(3!\\)",
                   "matrix",
                   "4 to the 3 over 2",
                   "mod 8+root17 i",
@@ -84,11 +84,12 @@
       function refresh () {
         var date = new Date();
 
-        // document.getElementbyId("clock").innerHTML = "hi";
-
         const time = document.createElement("span");
-        time.textContent = sums[date.getHours()] + ":" + sums[date.getMinutes()] + ":" + sums[date.getSeconds()];
+        // time.textContent = sums[date.getHours()] + ":" + sums[date.getMinutes()] + ":" + sums[date.getSeconds()];
+        time.textContent = sums[date.getHours()] + ":" + sums[date.getMinutes()] + ":" + sums[6];
+
         document.getElementById("clock").innerHTML = "";
+
         document.getElementById("clock").appendChild(time.cloneNode(true));
         MathJax.typeset();
       }
